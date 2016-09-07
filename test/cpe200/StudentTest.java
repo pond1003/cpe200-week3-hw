@@ -12,7 +12,7 @@ public class StudentTest {
 
     @Test
     public void defaultConstructor() throws Exception {
-        s = new Student();
+        s = new Student("John Doe", "560610000", 1990, false);
         assertEquals("John Doe", s.getName());
         assertEquals("560610000", s.getStudent_id());
         assertEquals(1990, s.getYearOfBirth());
@@ -54,23 +54,23 @@ public class StudentTest {
 
         // invalid data
         s.setStudent_id("550710111");
-        assertEquals("590611702",s.getStudent_id());
+        assertEquals("590611702", s.getStudent_id());
 
         // valid data
         s.setStudent_id("590612111");
-        assertEquals("590612111",s.getStudent_id());
+        assertEquals("590612111", s.getStudent_id());
 
         // invalid data
         s.setStudent_id("590613111");
-        assertEquals("590612111",s.getStudent_id());
+        assertEquals("590612111", s.getStudent_id());
 
         // invalid data
         s.setStudent_id("590613111000");
-        assertEquals("590612111",s.getStudent_id());
+        assertEquals("590612111", s.getStudent_id());
 
         // invalid data
         s.setStudent_id("helloworld");
-        assertEquals("590612111",s.getStudent_id());
+        assertEquals("590612111", s.getStudent_id());
     }
 
     @Test
