@@ -5,6 +5,13 @@ import java.util.regex.Pattern;
 
 public class Student {
 
+    public Student(){ this.YearOfBirth = 1990;
+                      this.name = "John Doe";
+                      this.id = "560610000";
+                      this.Active = false;
+
+    }
+
     public Student(String n,String i,int y,boolean a) {
         // implement here
         this.YearOfBirth = (y>1989)?y:1990;
