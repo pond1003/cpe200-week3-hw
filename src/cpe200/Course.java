@@ -13,10 +13,18 @@ public class Course {
     }
 
     public Course(String n, String cid) {
+        this.course_name = !n.equalsIgnoreCase("")?n:"TBA";
+        this.course_id = isValidCourse_id(cid)?cid:"000000";
+        this.lecturer = "TBA";
+        this.max_students = 30;
         // implement here
     }
 
     public Course(String n, String cid, String l) {
+        this.course_name = !n.equalsIgnoreCase("")?n:"TBA";
+        this.course_id = isValidCourse_id(cid)?cid:"000000";
+        this.lecturer = !l.equalsIgnoreCase("")?l:"TBA";
+        this.max_students = 30;
         // implement here
     }
 
